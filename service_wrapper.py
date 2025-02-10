@@ -3,7 +3,6 @@ import win32service
 import win32event
 import servicemanager
 import sys
-import os
 import threading
 import time
 
@@ -30,7 +29,7 @@ class QueueAccept(win32serviceutil.ServiceFramework):
         # Keep the service alive
 
         while self.is_alive:
-            time.sleep(5)
+            time.sleep(1)
 
 if __name__ == "__main__":
     if len(sys.argv) == 11:
